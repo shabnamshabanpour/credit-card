@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+
+.bg {
+    background-image: linear-gradient(to right top, #071a03, #0d270e, #0e3615, #0c451c, #055524);
+}
+
+.card {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    color: gold;
+    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+    background-repeat: no-repeat;
+    position: relative;
+    transform-style: preserve-3d;
+
+    >div {
+        backface-visibility: hidden;
+    }
+
+    >.back {
+        background-image: linear-gradient(to right, #434343 0%, black 100%);
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+
+    &:hover {
+        transform: rotateY(180deg);
+    }
+
+}
+
+
+input {
+    transition: all 0.3s ease;
+
+    &:focus {
+        outline: none;
+        border-color: #d4af37;
+        box-shadow:
+            0 0 0 3px rgba(212, 175, 55, 0.25),
+            0 8px 20px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
+    }
+}
+
+
+button {
+    transition: all 0.35s cubic-bezier(.4, .2, .2, 1);
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.35);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.25);
+}
+
